@@ -1,15 +1,4 @@
-# CLARA
-This repository is part of the [CLARA project](https://project.inria.fr/clara/).
-The CLARA project aims to empower teachers in the task of creating new educational resources.
-And in particular with the task of handling the licenses of reused educational resources.
-
-This repository contains all things related to the mapping and validation of the CLARA Knowledge Graph.
-
-
-### Access the Knowledge Graph
-A first very rough demo tool exists at the url https://clara.univ-nantes.fr/ and allows query data from the graph using keywords and filters.
-
-A **SPARQL endpoint** for the knowledge graph is available at https://clara.univ-nantes.fr/sparql.
+This repository contains all things related to the mapping and validation of the Knowledge Graph.
 
 ### Requirements
 In order to use the mappings for standard reification, singleton property, or named graph, our mapper uses java.
