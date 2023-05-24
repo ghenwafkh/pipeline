@@ -5,7 +5,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
-@prefix uno: <https://clara.univ-nantes.fr/ontology/> .
+@prefix uno: <https://unknown.com/ontology/> .
 @prefix owl: <https://www.w3.org/2002/07/owl#> .
 
 
@@ -83,7 +83,7 @@ dct:
 _:ERShape 
     a sh:NodeShape ;
     sh:targetClass lom:LearningObject ;
-    sh:pattern "^https://clara.univ-nantes.fr/resource/" ;
+    sh:pattern "^https://unknown.com/resource/" ;
 
     sh:property [
         sh:message "The ER must have one type exactly" ;

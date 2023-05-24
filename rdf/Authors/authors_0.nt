@@ -1,62 +1,62 @@
-<https://clara.univ-nantes.fr/resource/Lavinia%20Scaletti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/John%20Breslin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Clement%20Blanchet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Sibel%20Adal%C4%B1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Felipe%20De%20Ferrari> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Andreja%20Padovnik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Iztok%20Kramberger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Nadja%20%C5%A0i%C4%8Darov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Sridhar%20Govindarajan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/David%20Jerison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Claes%20Gustafsson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Philippe%20Laublet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Delia%20Rusu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Thomas%20Scharrenbach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Lorand%20Dali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Andrej%20%C5%BDnidar%C5%A1i%C4%8D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Aleksandra%20Zarek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Alexandre%20Passant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Sara%20Neves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Marko%20Grobelnik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Ricardo%20Baeza-Yates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Mounia%20Lalmas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Jean%20Yves%20Audibert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Pete%20Young> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Emanuele%20Della%20Valle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Alvaro%20Graves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Dunja%20Mladeni%C4%87> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Tadej%20%C5%A0tajner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Bla%C5%BE%20Fortuna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Stefan%20Decker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Konstantin%20Mertsalov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<https://clara.univ-nantes.fr/resource/Sibel%20Adal%C4%B1> <http://xmlns.com/foaf/0.1/name> "Sibel Adalı" .
-<https://clara.univ-nantes.fr/resource/Aleksandra%20Zarek> <http://xmlns.com/foaf/0.1/name> "Aleksandra Zarek" .
-<https://clara.univ-nantes.fr/resource/Emanuele%20Della%20Valle> <http://xmlns.com/foaf/0.1/name> "Emanuele Della Valle" .
-<https://clara.univ-nantes.fr/resource/Dunja%20Mladeni%C4%87> <http://xmlns.com/foaf/0.1/name> "Dunja Mladenić" .
-<https://clara.univ-nantes.fr/resource/Tadej%20%C5%A0tajner> <http://xmlns.com/foaf/0.1/name> "Tadej Štajner" .
-<https://clara.univ-nantes.fr/resource/Andreja%20Padovnik> <http://xmlns.com/foaf/0.1/name> "Andreja Padovnik" .
-<https://clara.univ-nantes.fr/resource/Jean%20Yves%20Audibert> <http://xmlns.com/foaf/0.1/name> "Jean Yves Audibert" .
-<https://clara.univ-nantes.fr/resource/John%20Breslin> <http://xmlns.com/foaf/0.1/name> "John Breslin" .
-<https://clara.univ-nantes.fr/resource/Felipe%20De%20Ferrari> <http://xmlns.com/foaf/0.1/name> "Felipe De Ferrari" .
-<https://clara.univ-nantes.fr/resource/Nadja%20%C5%A0i%C4%8Darov> <http://xmlns.com/foaf/0.1/name> "Nadja Šičarov" .
-<https://clara.univ-nantes.fr/resource/Stefan%20Decker> <http://xmlns.com/foaf/0.1/name> "Stefan Decker" .
-<https://clara.univ-nantes.fr/resource/Lavinia%20Scaletti> <http://xmlns.com/foaf/0.1/name> "Lavinia Scaletti" .
-<https://clara.univ-nantes.fr/resource/Philippe%20Laublet> <http://xmlns.com/foaf/0.1/name> "Philippe Laublet" .
-<https://clara.univ-nantes.fr/resource/Alvaro%20Graves> <http://xmlns.com/foaf/0.1/name> "Alvaro Graves" .
-<https://clara.univ-nantes.fr/resource/Lorand%20Dali> <http://xmlns.com/foaf/0.1/name> "Lorand Dali" .
-<https://clara.univ-nantes.fr/resource/Konstantin%20Mertsalov> <http://xmlns.com/foaf/0.1/name> "Konstantin Mertsalov" .
-<https://clara.univ-nantes.fr/resource/Bla%C5%BE%20Fortuna> <http://xmlns.com/foaf/0.1/name> "Blaž Fortuna" .
-<https://clara.univ-nantes.fr/resource/Ricardo%20Baeza-Yates> <http://xmlns.com/foaf/0.1/name> "Ricardo Baeza-Yates" .
-<https://clara.univ-nantes.fr/resource/Andrej%20%C5%BDnidar%C5%A1i%C4%8D> <http://xmlns.com/foaf/0.1/name> "Andrej Žnidaršič" .
-<https://clara.univ-nantes.fr/resource/Marko%20Grobelnik> <http://xmlns.com/foaf/0.1/name> "Marko Grobelnik" .
-<https://clara.univ-nantes.fr/resource/Sridhar%20Govindarajan> <http://xmlns.com/foaf/0.1/name> "Sridhar Govindarajan" .
-<https://clara.univ-nantes.fr/resource/Claes%20Gustafsson> <http://xmlns.com/foaf/0.1/name> "Claes Gustafsson" .
-<https://clara.univ-nantes.fr/resource/Thomas%20Scharrenbach> <http://xmlns.com/foaf/0.1/name> "Thomas Scharrenbach" .
-<https://clara.univ-nantes.fr/resource/Sara%20Neves> <http://xmlns.com/foaf/0.1/name> "Sara Neves" .
-<https://clara.univ-nantes.fr/resource/Delia%20Rusu> <http://xmlns.com/foaf/0.1/name> "Delia Rusu" .
-<https://clara.univ-nantes.fr/resource/Iztok%20Kramberger> <http://xmlns.com/foaf/0.1/name> "Iztok Kramberger" .
-<https://clara.univ-nantes.fr/resource/Alexandre%20Passant> <http://xmlns.com/foaf/0.1/name> "Alexandre Passant" .
-<https://clara.univ-nantes.fr/resource/Mounia%20Lalmas> <http://xmlns.com/foaf/0.1/name> "Mounia Lalmas" .
-<https://clara.univ-nantes.fr/resource/Clement%20Blanchet> <http://xmlns.com/foaf/0.1/name> "Clement Blanchet" .
-<https://clara.univ-nantes.fr/resource/David%20Jerison> <http://xmlns.com/foaf/0.1/name> "David Jerison" .
-<https://clara.univ-nantes.fr/resource/Pete%20Young> <http://xmlns.com/foaf/0.1/name> "Pete Young" .
+<https://unknown.com/resource/Lavinia%20Scaletti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/John%20Breslin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Clement%20Blanchet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Sibel%20Adal%C4%B1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Felipe%20De%20Ferrari> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Andreja%20Padovnik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Iztok%20Kramberger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Nadja%20%C5%A0i%C4%8Darov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Sridhar%20Govindarajan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/David%20Jerison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Claes%20Gustafsson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Philippe%20Laublet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Delia%20Rusu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Thomas%20Scharrenbach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Lorand%20Dali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Andrej%20%C5%BDnidar%C5%A1i%C4%8D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Aleksandra%20Zarek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Alexandre%20Passant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Sara%20Neves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Marko%20Grobelnik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Ricardo%20Baeza-Yates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Mounia%20Lalmas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Jean%20Yves%20Audibert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Pete%20Young> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Emanuele%20Della%20Valle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Alvaro%20Graves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Dunja%20Mladeni%C4%87> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Tadej%20%C5%A0tajner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Bla%C5%BE%20Fortuna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Stefan%20Decker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Konstantin%20Mertsalov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://unknown.com/resource/Sibel%20Adal%C4%B1> <http://xmlns.com/foaf/0.1/name> "Sibel Adalı" .
+<https://unknown.com/resource/Aleksandra%20Zarek> <http://xmlns.com/foaf/0.1/name> "Aleksandra Zarek" .
+<https://unknown.com/resource/Emanuele%20Della%20Valle> <http://xmlns.com/foaf/0.1/name> "Emanuele Della Valle" .
+<https://unknown.com/resource/Dunja%20Mladeni%C4%87> <http://xmlns.com/foaf/0.1/name> "Dunja Mladenić" .
+<https://unknown.com/resource/Tadej%20%C5%A0tajner> <http://xmlns.com/foaf/0.1/name> "Tadej Štajner" .
+<https://unknown.com/resource/Andreja%20Padovnik> <http://xmlns.com/foaf/0.1/name> "Andreja Padovnik" .
+<https://unknown.com/resource/Jean%20Yves%20Audibert> <http://xmlns.com/foaf/0.1/name> "Jean Yves Audibert" .
+<https://unknown.com/resource/John%20Breslin> <http://xmlns.com/foaf/0.1/name> "John Breslin" .
+<https://unknown.com/resource/Felipe%20De%20Ferrari> <http://xmlns.com/foaf/0.1/name> "Felipe De Ferrari" .
+<https://unknown.com/resource/Nadja%20%C5%A0i%C4%8Darov> <http://xmlns.com/foaf/0.1/name> "Nadja Šičarov" .
+<https://unknown.com/resource/Stefan%20Decker> <http://xmlns.com/foaf/0.1/name> "Stefan Decker" .
+<https://unknown.com/resource/Lavinia%20Scaletti> <http://xmlns.com/foaf/0.1/name> "Lavinia Scaletti" .
+<https://unknown.com/resource/Philippe%20Laublet> <http://xmlns.com/foaf/0.1/name> "Philippe Laublet" .
+<https://unknown.com/resource/Alvaro%20Graves> <http://xmlns.com/foaf/0.1/name> "Alvaro Graves" .
+<https://unknown.com/resource/Lorand%20Dali> <http://xmlns.com/foaf/0.1/name> "Lorand Dali" .
+<https://unknown.com/resource/Konstantin%20Mertsalov> <http://xmlns.com/foaf/0.1/name> "Konstantin Mertsalov" .
+<https://unknown.com/resource/Bla%C5%BE%20Fortuna> <http://xmlns.com/foaf/0.1/name> "Blaž Fortuna" .
+<https://unknown.com/resource/Ricardo%20Baeza-Yates> <http://xmlns.com/foaf/0.1/name> "Ricardo Baeza-Yates" .
+<https://unknown.com/resource/Andrej%20%C5%BDnidar%C5%A1i%C4%8D> <http://xmlns.com/foaf/0.1/name> "Andrej Žnidaršič" .
+<https://unknown.com/resource/Marko%20Grobelnik> <http://xmlns.com/foaf/0.1/name> "Marko Grobelnik" .
+<https://unknown.com/resource/Sridhar%20Govindarajan> <http://xmlns.com/foaf/0.1/name> "Sridhar Govindarajan" .
+<https://unknown.com/resource/Claes%20Gustafsson> <http://xmlns.com/foaf/0.1/name> "Claes Gustafsson" .
+<https://unknown.com/resource/Thomas%20Scharrenbach> <http://xmlns.com/foaf/0.1/name> "Thomas Scharrenbach" .
+<https://unknown.com/resource/Sara%20Neves> <http://xmlns.com/foaf/0.1/name> "Sara Neves" .
+<https://unknown.com/resource/Delia%20Rusu> <http://xmlns.com/foaf/0.1/name> "Delia Rusu" .
+<https://unknown.com/resource/Iztok%20Kramberger> <http://xmlns.com/foaf/0.1/name> "Iztok Kramberger" .
+<https://unknown.com/resource/Alexandre%20Passant> <http://xmlns.com/foaf/0.1/name> "Alexandre Passant" .
+<https://unknown.com/resource/Mounia%20Lalmas> <http://xmlns.com/foaf/0.1/name> "Mounia Lalmas" .
+<https://unknown.com/resource/Clement%20Blanchet> <http://xmlns.com/foaf/0.1/name> "Clement Blanchet" .
+<https://unknown.com/resource/David%20Jerison> <http://xmlns.com/foaf/0.1/name> "David Jerison" .
+<https://unknown.com/resource/Pete%20Young> <http://xmlns.com/foaf/0.1/name> "Pete Young" .
