@@ -36,8 +36,8 @@
     foaf:page <https://unknown.com/>; # Le lien de l'outil CLARA
     void:sparqlEndpoint <https://unknown.com/sparql>;
     dct:provenance <https://www.x5gon.org>;
-    void:vocabulary <http://clara.univ-nantes.fr/ontology/>;                        #uno
-    void:vocabulary <http://clara.univ-nantes.fr/statement/>;                       #uns
+    void:vocabulary <https://unknown.com/ontology/>;                        #uno
+    void:vocabulary <https://unknown.com/statement/>;                       #uns
     void:vocabulary <http://schema.org/>;                                           #sc
     void:vocabulary <http://purl.org/dc/terms/>;                                    #dctvoid:vocabulary <http://www.w3.org/1999/02/22-rdf-syntax-ns>;                   #rdf   - probably not mandatory to explicit its usage
     void:vocabulary <http://www.w3.org/2000/01/rdf-schema>;                         #rdfs  - probably not mandatory to explicit its usage
