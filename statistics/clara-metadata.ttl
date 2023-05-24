@@ -121,4 +121,4 @@
 
     :webapp_tool a dcat:Service ;
                      dct:title "CLARA Web Application" ;
-                     dcat:endpoint <https://clara.univ-nantes.fr>.
+                     dcat:endpoint <https://unknown.com>
