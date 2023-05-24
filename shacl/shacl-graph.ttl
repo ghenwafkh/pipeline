@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sc: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
+@prefix uno: <https://clara.univ-nantes.fr/ontology/> .
+@prefix owl: <https://www.w3.org/2002/07/owl#> .
+
+_:reificationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf uno:pageRank ;
+    sh:property [
+        sh:message "singleton properties must have only one pagerank score." ;
+        sh:path uno:pageRank ;
+	    sh:minCount 1 ;
+	    sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "singleton properties must have only one cosine similarity." ;
+        sh:path uno:cosineSimilarity ;
+	    sh:minCount 1 ;
+	    sh:maxCount 1 ;
+    ] ;
+    sh:sparql [
+        sh:message "graph reification must have one lom:LearningObject as a subject, on IRI as a concept, and be in parrallele with the dct:subject triple." ;
+        sh:prefixes dct:, lom: ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                FILTER NOT EXISTS {
+                    GRAPH $this { ?er dct:subject ?concept. } 
+                    ?er a lom:LearningObject.
+                    FILTER (isIRI(?concept))
+                }
+            }
+            """ ;
+    ] ;
+    sh:sparql [
+        sh:message "singleton properties must have only one subject and only one object." ;
+        sh:prefixes lom: ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                GRAPH $this {?er_0 dct:subject ?concept_0}.
+                GRAPH $this {?er_1 dct:subject ?concept_1}.
+                FILTER (?er_0 != ?er_1 || ?concept_0 != ?concept_1)
+            }
+            """ ;
+    ] ;
+	sh:closed true ;
+.
+
+lom:
+	a owl:Ontology ;
+	owl:imports sh: ;
+	sh:declare [
+		sh:prefix "lom" ;
+		sh:namespace "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"^^xsd:anyURI ;
+	].
+
+dct:
+	a owl:Ontology ;
+	owl:imports sh: ;
+	sh:declare [
+		sh:prefix "dct" ;
+		sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+	].

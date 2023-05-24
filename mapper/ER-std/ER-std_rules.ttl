@@ -1,0 +1,163 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <https://clara.univ-nantes.fr/rules/> .
+@prefix uno: <https://clara.univ-nantes.fr/ontology/> .
+@prefix uns: <https://clara.univ-nantes.fr/statement/> .
+@prefix unr: <https://clara.univ-nantes.fr/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+:ERMapping a rr:TriplesMap;
+	
+	rml:logicalSource [
+		rml:source "json/ER/ER_0.json";
+		rml:referenceFormulation ql:JSONPath;
+		rml:iterator "$.resources[*]";
+	];
+
+	rr:subjectMap [
+ 		rr:template "https://clara.univ-nantes.fr/resource/{id}";
+ 		rr:class lom:LearningObject;
+ 	];
+
+	rr:predicateObjectMap [
+		rr:predicate dct:created;
+  		rr:objectMap [ 
+			rml:reference "date";
+			rr:datatype xsd:date ];
+  	];
+
+	rr:predicateObjectMap [
+		rr:predicate dct:title;
+  		rr:objectMap [ rml:reference "title" ];
+  	];
+
+  	rr:predicateObjectMap [
+		rr:predicate dct:description;
+  		rr:objectMap [ rml:reference "description" ];
+  	];
+
+   	rr:predicateObjectMap [
+		rr:predicate dct:format;
+  		rr:objectMap [ rml:reference "mimetype" ];
+  	];
+
+   	rr:predicateObjectMap [
+		rr:predicate dct:language;
+  		rr:objectMap [ rml:reference "language" ];
+  	];
+
+   	rr:predicateObjectMap [
+		rr:predicate dct:license;
+  		rr:objectMap [
+    		rml:reference "license";
+ 			rr:termType rr:IRI;
+		];
+  	];
+
+   	rr:predicateObjectMap [
+		rr:predicate dct:creator;
+  		rr:objectMap [
+    		rr:template "https://clara.univ-nantes.fr/resource/{authors}";
+ 			rr:termType rr:IRI;
+		];
+  	];
+
+   	rr:predicateObjectMap [
+		rr:predicate dct:publisher;
+  		rr:objectMap [ rml:reference "publisher" ];
+  	];
+
+   	rr:predicateObjectMap [
+		rr:predicate schema:url;
+  		rr:objectMap [
+    		rml:reference "url";
+    		rr:datatype xsd:anyURI;
+    	];
+  	];  	   	
+
+   	rr:predicateObjectMap [
+		rr:predicate uno:knn;
+  		rr:objectMap [
+    		rr:template "https://platform.x5gon.org/api/v1/oer_materials/{knn}";
+    		rr:datatype xsd:anyURI;
+		];
+  	];  	
+
+   	rr:predicateObjectMap [
+		rr:predicate uno:tfknn;
+  		rr:objectMap [
+    		rr:template "https://platform.x5gon.org/api/v1/oer_materials/{tfknn}";
+    		rr:datatype xsd:anyURI;
+		];
+
+  	];  	
+
+  	# rr:predicateObjectMap [				# base triple
+  	# 	rr:predicate dct:subject;
+  	# 	rr:objectMap [
+ 	# 		rml:reference "concepts.dbPediaIri";
+ 	# 		rr:termType rr:IRI;
+ 	# 	]
+ 	# ];
+.
+
+
+:ReifiedMapping a rr:TriplesMap;
+
+	rml:logicalSource [
+		rml:source "json/ER/ER_0.json";
+		rml:referenceFormulation ql:JSONPath;
+		rml:iterator "$.resources[*].concepts[*]";
+	];
+
+	rr:subjectMap [
+		rr:template "https://clara.univ-nantes.fr/statement/{er_id}-{c_id}";
+		rr:class rdf:Statement;
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate rdf:subject;
+  		rr:objectMap [
+			rr:template "https://clara.univ-nantes.fr/resource/{er_id}";
+ 			rr:termType rr:IRI;
+		];
+  	];
+
+  	rr:predicateObjectMap [
+		rr:predicate rdf:predicate;
+  		rr:objectMap [ rr:constant dct:subject ];
+  	];
+
+  	rr:predicateObjectMap [
+  		rr:predicate rdf:object;
+  		rr:objectMap [
+  			rml:reference "dbPediaIri";
+ 			rr:termType rr:IRI;
+ 		]
+  	];
+
+  	rr:predicateObjectMap [
+  		rr:predicate uno:cosineSimilarity;
+  		rr:objectMap [
+  			rml:reference "norm_cosine";
+  			rr:datatype xsd:double;
+ 		]
+  	];
+
+  	rr:predicateObjectMap [
+  		rr:predicate uno:pageRank;
+  		rr:objectMap [
+  			rml:reference "norm_pageRank";
+  			rr:datatype xsd:double;
+ 		]
+  	];
+.

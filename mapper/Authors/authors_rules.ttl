@@ -1,0 +1,33 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <https://clara.univ-nantes.fr/rules/> .
+@prefix uno: <https://clara.univ-nantes.fr/ontology/> .
+@prefix uns: <https://clara.univ-nantes.fr/statement/> .
+@prefix unr: <https://clara.univ-nantes.fr/resource/> .
+
+
+:AuthorMapping a rr:TriplesMap;
+
+	rml:logicalSource [
+		rml:source "json/Authors/authors_0.json";
+		rml:referenceFormulation ql:JSONPath;
+		rml:iterator "$";
+	];
+
+	rr:subjectMap [
+ 		rr:template "https://clara.univ-nantes.fr/resource/{authors}";
+ 		rr:class foaf:Person;
+ 	];
+
+	rr:predicateObjectMap [
+		rr:predicate foaf:name;
+  		rr:objectMap [ rml:reference "authors" ];
+	].

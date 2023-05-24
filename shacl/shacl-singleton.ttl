@@ -1,0 +1,178 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sc: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
+@prefix uno: <https://clara.univ-nantes.fr/ontology/> .
+@prefix owl: <https://www.w3.org/2002/07/owl#> .
+
+
+_:ReificationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rdf:singletonPropertyOf ;
+    sh:property [
+        sh:message "singleton properties must be singleton properties of dct:subect only." ;
+        sh:path rdf:singletonPropertyOf ;
+        sh:value dct:subject ;
+	    sh:minCount 1 ;
+	    sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "singleton properties must have one and only one pagerank score." ;
+        sh:path uno:pageRank ;
+	    sh:minCount 1 ;
+	    sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "singleton properties must have one and only one cosine similarity." ;
+        sh:path uno:cosineSimilarity ;
+	    sh:minCount 1 ;
+	    sh:maxCount 1 ;
+    ] ;
+    sh:sparql [
+        sh:name "test";
+        sh:message "singleton properties must have one lom:LearningObject as a subject, on IRI as a concept, and be in parrallele with the dct:subject triple." ;
+        sh:prefixes lom:, dct: ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?er dct:subject ?concept.
+                    ?er $this ?concept.
+                    ?er a lom:LearningObject.
+                    FILTER (isIRI(?concept))
+                }
+            }
+            """ ;
+    ];
+    sh:sparql [
+        sh:message "singleton properties must have only one subject and only one object." ;
+        sh:prefixes lom: ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                ?er_0 $this ?concept_0.
+                ?er_1 $this ?concept_1.
+                FILTER (?er_0 != ?er_1 || ?concept_0 != ?concept_1)
+            }
+            """ ;
+    ] ;
+	sh:closed true ;
+.
+
+lom:
+	a owl:Ontology ;
+	owl:imports sh: ;
+	sh:declare [
+		sh:prefix "lom" ;
+		sh:namespace "http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#"^^xsd:anyURI ;
+	].
+
+dct:
+	a owl:Ontology ;
+	owl:imports sh: ;
+	sh:declare [
+		sh:prefix "dct" ;
+		sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+	].
+
+
+
+_:ERShape 
+    a sh:NodeShape ;
+    sh:targetClass lom:LearningObject ;
+    sh:pattern "^https://clara.univ-nantes.fr/resource/" ;
+
+    sh:property [
+        sh:message "The ER must have one type exactly" ;
+		sh:path rdf:type ;
+        sh:value lom:LearningObject ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "Its better if the ER has at least one author" ;
+        sh:name "Number of Author" ;
+	    sh:path dct:creator ;
+        sh:minCount 1 ;
+        sh:severity sh:Info ; 
+        sh:message "Il n'y a pas d'auteur spécifié, il est préférable de spécifier au moins un auteur."@fr ;
+        sh:message "No authors were specified, it is preferable to have at least one."@en ;
+    ] ;
+    sh:property [
+        sh:message "Authors must be IRIs" ;
+        sh:name "Type of the authors" ;
+		sh:path dct:creator ;
+		sh:nodeKind sh:IRI ;
+        sh:message "Attention, les auteurs doivent être des IRIs."@fr ;
+        sh:message "Atention, Authors must be IRIs."@en ;
+    ];
+    sh:property [
+        sh:message "The ER must have one license exactly, as an IRI" ;
+		sh:path dct:license ;
+		sh:nodeKind sh:IRI ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "The ER must have at least one URL" ;
+		sh:path sc:url ;
+		sh:datatype xsd:anyURI ;
+		sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "The ER may have one date of creation, as xsd:date" ;
+		sh:path dct:created ;
+		sh:datatype xsd:date ;
+		sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "The ER must have one title exactly" ;
+		sh:path dct:title ;
+        sh:datatype xsd:string ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "The ER must have at least one language" ;
+		sh:path dct:language ;
+		sh:datatype xsd:string ;
+		sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "The ER may have one description, that description must be a String" ;
+		sh:path dct:description ;
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:message "The ER must have one mimeformat, matching a regex" ;
+		sh:path dct:format ;
+		sh:datatype xsd:string ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+        sh:pattern "^.+/.+$" ;
+    ] ;
+    sh:property [
+        sh:message "It is probably wrong if the ER isn't linked to any DBpedia resource" ;
+        sh:path dct:subject ;
+        sh:minCount 1 ;
+        sh:severity sh:Info ;
+    ] ;
+	# sh:closed true ;
+	# sh:ignoredProperties ( dct:publisher uno:knn uno:tfknn ) ;
+.
+
+
+# _:ResourceShape
+#     a sh:NodeShape ;
+# 	sh:targetObjectsOf rdf:object ;
+#     sh:property [
+#         sh:description "A DBpedia resource must be the object of at least one statement" ;
+#         sh:path [ sh:inversePath rdf:object ] ;
+#         sh:minCount 1 ;
+#     ] ;
+# 	sh:closed true ;
+# 	sh:ignoredProperties ( rdf:type ) .

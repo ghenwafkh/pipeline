@@ -1,0 +1,124 @@
+@prefix : <https://clara.univ-nantes.fr/.well-known/void> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+
+<https://clara.univ-nantes.fr/.well-known/void> a void:DatasetDescription;
+    dct:title "A VoID Description of the CLARA dataset";
+    # dct:creator ;
+    foaf:primaryTopic <https://clara.univ-nantes.fr/source/x5gon>.
+
+<https://clara.univ-nantes.fr/.well-known/dcat> a dcat:Catalog ;
+    dct:title "CLARA Catalog" ;
+    dct:description "This is a catalog of the CLARA project datasets." ;
+    dcat:dataset <https://clara.univ-nantes.fr/graph/x5gon> .
+
+<https://clara.univ-nantes.fr/graph/x5gon> a dcat:Dataset, void:Dataset ;
+    dct:title "CLARA dataset" ;
+    dct:description "" ;
+    dcat:distribution <https://clara.univ-nantes.fr/distribution> ;
+    dcat:keyword "educational resources"@en, "topics"@en, "licenses"@en, "categories"@en  ;
+    dcat:theme <http://dbpedia.org/resource/Category:Education>;
+    dcat:service :webapp_tool;
+    #dcat:theme;
+    dct:publisher :Nantes_University;
+    dct:contributor :Nantes_University;
+    dct:contributor :Rennes_University;
+    dct:license <https://creativecommons.org/licenses/by/2.0/>;
+    # foaf:page ; Le lien du projet CLARA
+    foaf:page <https://clara.univ-nantes.fr/>; # Le lien de l'outil CLARA
+    void:sparqlEndpoint <https://clara.univ-nantes.fr/sparql>;
+    dct:provenance <https://www.x5gon.org>;
+    void:vocabulary <http://clara.univ-nantes.fr/ontology/>;                        #uno
+    void:vocabulary <http://clara.univ-nantes.fr/statement/>;                       #uns
+    void:vocabulary <http://schema.org/>;                                           #sc
+    void:vocabulary <http://purl.org/dc/terms/>;                                    #dctvoid:vocabulary <http://www.w3.org/1999/02/22-rdf-syntax-ns>;                   #rdf   - probably not mandatory to explicit its usage
+    void:vocabulary <http://www.w3.org/2000/01/rdf-schema>;                         #rdfs  - probably not mandatory to explicit its usage
+    void:vocabulary <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#>;      #lom
+    void:vocabulary <http://www.w3.org/2004/02/skos/core#>;                         #skos
+    dct:subject <http://dbpedia.org/resource/Category:Educational_materials>;
+    void:triples 160268056;
+    void:entities 43782;
+    void:distinctSubjects 18653290;
+    void:distinctObjects 700000;
+    void:properties 257;
+    void:classes 382903  .     # Those statistics will need to be recalculated when the graph is rebuilt
+
+
+<https://clara.univ-nantes.fr/distribution> a dcat:Distribution ;
+    dct:title "CLARA dataset distribution" ;
+    dct:description "" ;
+    #dcat:downloadURL <http://example.org/dataset1/distribution1> ;
+    #dct:format "text/csv" .
+
+    void:subset :clara_concepts;
+
+    void:classPartition
+    # The subset of educational resources
+    [
+    void:class lom:LearningObject;
+    void:uriSpace "https://clara.univ-nantes.fr/resource/";
+    void:triples 45000;
+    dct:subject <http://dbpedia.org/resource/Category:Educational_materials>;
+    ],
+    # The subset of categories
+    [
+    void:class  skos:Concept;
+    void:uriSpace "http://dbpedia.org/resource/";
+    void:triples 2193008;
+    dct:subject <http://dbpedia.org/resource/Category>;
+    ],
+    # The subset of authors
+    [
+    void:class  foaf:person;
+    void:uriSpace "https://clara.univ-nantes.fr/resource/";
+    void:triples 13457;
+    dct:subject <http://dbpedia.org/resource/Author>;
+    ],
+    # The subset of licenses
+    [
+    void:class  odrl:Policy;
+    void:uriSpace "http://creativecommons.org/licenses/";
+    void:triples 22; #22 to verify
+    dct:subject <http://dbpedia.org/resource/License>;
+    ],
+    # The subset of reifications
+    [
+    void:class rdf:Statement;
+    void:uriSpace "https://clara.univ-nantes.fr/statement/";
+    void:triples 8265057;
+    dct:subject <http://dbpedia.org/resource/Reification>;      #not sure of the resource used, maybe nothing is better.
+    ] .
+
+# # The subset of publishers
+# [           #if we need it / want it
+#     void:class ;
+#     void:triples 9;
+#     dct:subject ;
+# ];
+    :Nantes_University a foaf:Organization;
+                       rdfs:label "Nantes Université";
+                       foaf:homepage <https://www.univ-nantes.fr/>.
+                                                                                                                                                                                                                                                                                                    .
+
+
+    :Rennes_University a foaf:Organization;                       # to be verified
+                       rdfs:label "Université de Rennes";
+                       foaf:homepage <https://www.univ-rennes.fr/>.
+                                                                                                                                                                                                                                                                                                               .
+
+    :clara_concepts a void:Dataset;
+                      void:uriSpace "http://dbpedia.org/resource/";
+                      void:uriRegexPattern "^http://(?!dbpedia.org/resource/Category:).*";
+                      void:triples: 135069.
+
+    :webapp_tool a dcat:Service ;
+                     dct:title "CLARA Web Application" ;
+                     dcat:endpoint <https://clara.univ-nantes.fr>.
