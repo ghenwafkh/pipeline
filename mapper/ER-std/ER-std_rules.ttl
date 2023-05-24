@@ -8,10 +8,10 @@
 @prefix schema: <http://schema.org/> .
 @prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix : <https://clara.univ-nantes.fr/rules/> .
-@prefix uno: <https://clara.univ-nantes.fr/ontology/> .
-@prefix uns: <https://clara.univ-nantes.fr/statement/> .
-@prefix unr: <https://clara.univ-nantes.fr/resource/> .
+@prefix : <https://unknown.com/>rules/> .
+@prefix uno: <https://unknown.com/>ontology/> .
+@prefix uns: <https://unknown.com/>statement/> .
+@prefix unr: <https://unknown.com/>resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
@@ -24,7 +24,7 @@
 	];
 
 	rr:subjectMap [
- 		rr:template "https://clara.univ-nantes.fr/resource/{id}";
+ 		rr:template "https://unknown.com/>resource/{id}";
  		rr:class lom:LearningObject;
  	];
 
@@ -66,7 +66,7 @@
    	rr:predicateObjectMap [
 		rr:predicate dct:creator;
   		rr:objectMap [
-    		rr:template "https://clara.univ-nantes.fr/resource/{authors}";
+    		rr:template "https://unknown.com/>resource/{authors}";
  			rr:termType rr:IRI;
 		];
   	];
@@ -120,14 +120,14 @@
 	];
 
 	rr:subjectMap [
-		rr:template "https://clara.univ-nantes.fr/statement/{er_id}-{c_id}";
+		rr:template "https://unknown.com/>statement/{er_id}-{c_id}";
 		rr:class rdf:Statement;
 	];
 
 	rr:predicateObjectMap [
 		rr:predicate rdf:subject;
   		rr:objectMap [
-			rr:template "https://clara.univ-nantes.fr/resource/{er_id}";
+			rr:template "https://unknown.com/>resource/{er_id}";
  			rr:termType rr:IRI;
 		];
   	];
