@@ -1,4 +1,4 @@
-@prefix : <https://unknown.com/>.well-known/void> .
+@prefix : <https://unknown.com/.well-known/void> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -10,20 +10,20 @@
 @prefix lom: <http://data.opendiscoveryspace.eu/lom_ontology_ods.owl#> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
-<https://unknown.com/>.well-known/void> a void:DatasetDescription;
+<https://unknown.com/.well-known/void> a void:DatasetDescription;
     dct:title "A VoID Description of the CLARA dataset";
     # dct:creator ;
-    foaf:primaryTopic <https://unknown.com/>source/x5gon>.
+    foaf:primaryTopic <https://unknown.com/source/x5gon>.
 
-<https://unknown.com/>.well-known/dcat> a dcat:Catalog ;
+<https://unknown.com/.well-known/dcat> a dcat:Catalog ;
     dct:title "CLARA Catalog" ;
     dct:description "This is a catalog of the CLARA project datasets." ;
-    dcat:dataset <https://unknown.com/>graph/x5gon> .
+    dcat:dataset <https://unknown.com/graph/x5gon> .
 
-<https://unknown.com/>graph/x5gon> a dcat:Dataset, void:Dataset ;
+<https://unknown.com/graph/x5gon> a dcat:Dataset, void:Dataset ;
     dct:title "CLARA dataset" ;
     dct:description "" ;
-    dcat:distribution <https://unknown.com/>distribution> ;
+    dcat:distribution <https://unknown.com/distribution> ;
     dcat:keyword "educational resources"@en, "topics"@en, "licenses"@en, "categories"@en  ;
     dcat:theme <http://dbpedia.org/resource/Category:Education>;
     dcat:service :webapp_tool;
@@ -33,8 +33,8 @@
     dct:contributor :Rennes_University;
     dct:license <https://creativecommons.org/licenses/by/2.0/>;
     # foaf:page ; Le lien du projet CLARA
-    foaf:page <https://unknown.com/>>; # Le lien de l'outil CLARA
-    void:sparqlEndpoint <https://unknown.com/>sparql>;
+    foaf:page <https://unknown.com/>; # Le lien de l'outil CLARA
+    void:sparqlEndpoint <https://unknown.com/sparql>;
     dct:provenance <https://www.x5gon.org>;
     void:vocabulary <http://clara.univ-nantes.fr/ontology/>;                        #uno
     void:vocabulary <http://clara.univ-nantes.fr/statement/>;                       #uns
@@ -52,7 +52,7 @@
     void:classes 382903  .     # Those statistics will need to be recalculated when the graph is rebuilt
 
 
-<https://unknown.com/>distribution> a dcat:Distribution ;
+<https://unknown.com/distribution> a dcat:Distribution ;
     dct:title "CLARA dataset distribution" ;
     dct:description "" ;
     #dcat:downloadURL <http://example.org/dataset1/distribution1> ;
@@ -64,7 +64,7 @@
     # The subset of educational resources
     [
     void:class lom:LearningObject;
-    void:uriSpace "https://unknown.com/>resource/";
+    void:uriSpace "https://unknown.com/resource/";
     void:triples 45000;
     dct:subject <http://dbpedia.org/resource/Category:Educational_materials>;
     ],
@@ -78,7 +78,7 @@
     # The subset of authors
     [
     void:class  foaf:person;
-    void:uriSpace "https://unknown.com/>resource/";
+    void:uriSpace "https://unknown.com/resource/";
     void:triples 13457;
     dct:subject <http://dbpedia.org/resource/Author>;
     ],
@@ -92,7 +92,7 @@
     # The subset of reifications
     [
     void:class rdf:Statement;
-    void:uriSpace "https://unknown.com/>statement/";
+    void:uriSpace "https://unknown.com/statement/";
     void:triples 8265057;
     dct:subject <http://dbpedia.org/resource/Reification>;      #not sure of the resource used, maybe nothing is better.
     ] .
