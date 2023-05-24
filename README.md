@@ -1,5 +1,3 @@
-This repository contains all things related to the mapping and validation of the Knowledge Graph.
-
 ### Requirements
 In order to use the mappings for standard reification, singleton property, or named graph, our mapper uses java.
 
