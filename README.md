@@ -1,4 +1,8 @@
-### Requirements
+### Data Transformation Pipeline 
+The pipeline involves three main phases: extraction, transformation, and loading. The extraction phase involves collecting data from a Postgres database. In the transformation phase, JSON files are converted into semantic RDF triples. To compare different RDF reification models, we created four RML mappings to obtain standard reification, RML-star, named graphs, and singleton properties. 
+
+
+## Requirements
 In order to use the mappings for standard reification, singleton property, or named graph, our mapper uses java.
 
 In order to use the mapping for RDF-star, we need python and [morphKGC](https://github.com/morph-kgc/morph-kgc) to be installed. In particular with the version 2.1.1.
