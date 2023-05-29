@@ -28,9 +28,6 @@
     dcat:theme <http://dbpedia.org/resource/Category:Education>;
     dcat:service :webapp_tool;
     #dcat:theme;
-    dct:publisher :Nantes_University;
-    dct:contributor :Nantes_University;
-    dct:contributor :Rennes_University;
     dct:license <https://creativecommons.org/licenses/by/2.0/>;
     # foaf:page ; Le lien du projet CLARA
     foaf:page <https://unknown.com/>; # Le lien de l'outil CLARA
@@ -103,15 +100,7 @@
 #     void:triples 9;
 #     dct:subject ;
 # ];
-    :Nantes_University a foaf:Organization;
-                       rdfs:label "Nantes Université";
-                       foaf:homepage <https://www.univ-nantes.fr/>.
-                                                                                                                                                                                                                                                                                                    .
 
-
-    :Rennes_University a foaf:Organization;                       # to be verified
-                       rdfs:label "Université de Rennes";
-                       foaf:homepage <https://www.univ-rennes.fr/>.
                                                                                                                                                                                                                                                                                                                .
 
     :clara_concepts a void:Dataset;
