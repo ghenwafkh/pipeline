@@ -36,12 +36,6 @@ We would require a way to validate a SHACL shape over multiple named graphs at o
 Additionaly it is important to point out how slow the validation for singleton property is, further improvement needs to be made in that regard.
 
 
-## Acknowledgments
-This work has received a French government support granted to the Labex Cominlabs excellence
-laboratory and managed by the National Research Agency in the "Investing for the Future"
-program under reference ANR-10-LABX-07-01. Authors thank Master students in Computer
-Science of Nantes University for her participation in some aspects of this work.
-
 ## License
 This work is licensed under a
 Creative Commons Attribution 4.0 International License.
