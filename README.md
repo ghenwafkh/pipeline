@@ -3,6 +3,7 @@ This pipeline describes the data transformation process to build four versions o
 
 This pipeline involves three main phases: extraction, transformation, and loading. The extraction phase involves collecting data from a Postgres database. In the transformation phase, JSON files are converted into semantic RDF triples. To compare different RDF reification models, we created four RML mappings to obtain 1) standard reification, 2) RML-star, 3) named graphs, and 4) singleton properties. 
 
+![Alt Text](pipeline (1).pdf)
 
 ## Requirements
 In order to use the mappings for standard reification, singleton property, or named graph, our mapper uses java.
