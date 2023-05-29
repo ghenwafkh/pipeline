@@ -6,9 +6,7 @@ This pipeline involves three main phases: extraction, transformation, and loadin
 ![Alt Text](https://github.com/ghenwafkh/pipeline/blob/ff5e40b5c16eb1b074650744f38f5f87fbbd0660/pipeline.png)
 
 ## Requirements
-In order to use the mappings for standard reification, singleton property, or named graph, our mapper uses java.
-
-In order to use the mapping for RDF-star, we need python and [morphKGC](https://github.com/morph-kgc/morph-kgc) to be installed. In particular with the version 2.1.1.
+In order to use the four different mapping for RDF and RDF-star, we need python and [morphKGC](https://github.com/morph-kgc/morph-kgc) to be installed.
 
 In order to use SHACL, the python library [pyshacl](https://github.com/RDFLib/pySHACL) is used.
 
@@ -16,6 +14,8 @@ The past two can be installed using `pip install -r requirements.txt`.
 
 ## RML mappings
 `mapper` contains a folders for all four different reification types and a mapper in the form of a .jar file. Each folder contains a mapping as well as a script to apply this mapping over all json files.
+
+`Authors` contains the mapping responsible for creating the triple relating to the authors of the different educational resources. This part of the graph is generated a single time and the files are then shared between the four different reification models.
 
 In order to use a specific mapping, execute the corresponding script from the main folder of the repository like so `sh mapper/ER-std/create_ER-std.sh`.
 Swap both `-std` for either `-singleton` `-graph` `-star` for the other reification types.
