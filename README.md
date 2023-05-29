@@ -10,7 +10,7 @@ In order to use the four different mapping for RDF and RDF-star, we need python 
 
 In order to use SHACL, the python library [pyshacl](https://github.com/RDFLib/pySHACL) is used.
 
-The past two can be installed using `pip install -r requirements.txt`.
+The past two can be installed using `pip install -r requirements.txt`. Preferably in a virtual environment.
 
 ## RML mappings
 `mapper` contains a folders for all four different reification types and a mapper in the form of a .jar file. Each folder contains a mapping as well as a script to apply this mapping over all json files.
