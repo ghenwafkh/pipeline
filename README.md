@@ -1,7 +1,7 @@
 ### Data Transformation Pipeline 
-This pipeline describes the data transformation process to build four versions of a Knwoledge Graph (KG) of educational resources (ER). ERs can be described by their title, creator, language, license, etc., as well as the subjects they cover. ERs' subjects can be numerous but not equally relevant for the ER RDF reification is used to describe the subjects treated in each ER. 
+This pipeline describes the data transformation process to build four versions of a Knwoledge Graph (KG) of educational resources (ER). ERs are described by their title, creator, language, license, etc., as well as the subjects they cover. ERs' subjects can be numerous but not equally relevant for the ER. Statement-based RDF reification is used to describe the subjects treated in each ER. 
 
-This pipelihe involves three main phases: extraction, transformation, and loading. The extraction phase involves collecting data from a Postgres database. In the transformation phase, JSON files are converted into semantic RDF triples. To compare different RDF reification models, we created four RML mappings to obtain standard reification, RML-star, named graphs, and singleton properties. 
+This pipelihe involves three main phases: extraction, transformation, and loading. The extraction phase involves collecting data from a Postgres database. In the transformation phase, JSON files are converted into semantic RDF triples. To compare different RDF reification models, we created four RML mappings to obtain 1) standard reification, 2) RML-star, 3) named graphs, and 4) singleton properties. 
 
 
 ## Requirements
