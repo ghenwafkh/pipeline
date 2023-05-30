@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    image: oxigraph/oxigraph
+    container_name: oxigraph-singleton
+    privileged: true
+
+    volumes:
+      - ./data:/data
+      
+    ports:
+      - 6002:7878

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    image: oxigraph/oxigraph
+    container_name: oxigraph-std
+    privileged: true
+
+    volumes:
+      - ./data:/data
+      
+    ports:
+      - 6000:7878

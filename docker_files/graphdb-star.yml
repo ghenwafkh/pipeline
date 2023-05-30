@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  db:
+    image: khaller/graphdb-free
+    container_name: graphdb-star
+    privileged: true
+    command: ["--GDB_HEAP_SIZE", "16G"]
+
+    volumes:
+      - ./data:/opt/graphdb/data
+
+    ports:
+      - 7003:7200

@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  db:
+    image: secoresearch/fuseki
+    container_name: jena-singleton
+    privileged: true
+    
+    environment:
+      ADMIN_PASSWORD: jena_exp
+      ENABLE_DATA_WRITE: true
+      ENABLE_UPDATE: true
+      ENABLE_UPDLOAD: true
+      QUERY_TIMEOUT: 1800000
+      JAVA_OPTS: "-Xms16g -Xmx16g"
+
+    volumes:
+      - ./databases:/fuseki-base/databases
+
+    ports:
+      - "3002:3030"

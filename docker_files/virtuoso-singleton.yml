@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  db:
+    image: tenforce/virtuoso
+    container_name: virtuoso-singleton
+    privileged: true
+    
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://unknown.com/graph"
+      DBA_PASSWORD:  "virt_exp"
+    
+      # CONFIGURATION virtuoso.ini
+      VIRT_SPARQL_ResultSetMaxRows: 0
+      VIRT_Parameters_DirsAllowed: ., /usr/local/virtuoso-opensource/share/virtuoso/vad, /graph
+      VIRT_SPARQL_MaxQueryExecutionTime: 1800
+      VIRT_Parameters_NumberOfBuffers: 1360000
+      VIRT_Parameters_MaxDirtyBuffers: 1000000
+
+    volumes:
+      - ./data:/data
+
+    ports:
+      - "2002:8890"
+      - "2222:1111"
